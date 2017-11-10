@@ -1,0 +1,11 @@
+{
+  "name": "react-native-scanner",
+  "version": "1.0.0",
+  "description": "scanner module for react-native which support Android and Ios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wuran",
+  "license": "ISC"
+}
