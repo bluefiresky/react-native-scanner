@@ -1,11 +1,74 @@
 {
-  "name": "react-native-scanner",
-  "version": "1.0.0",
+  "_args": [
+    [
+      {
+        "raw": "git+https://github.com/bluefiresky/react-native-scanner.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "git+https://github.com/bluefiresky/react-native-scanner.git",
+        "spec": "git+https://github.com/bluefiresky/react-native-scanner.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:bluefiresky/react-native-scanner.git",
+          "sshUrl": "git+ssh://git@github.com/bluefiresky/react-native-scanner.git",
+          "httpsUrl": "git+https://github.com/bluefiresky/react-native-scanner.git",
+          "gitUrl": "git://github.com/bluefiresky/react-native-scanner.git",
+          "shortcut": "github:bluefiresky/react-native-scanner",
+          "directUrl": "https://raw.githubusercontent.com/bluefiresky/react-native-scanner/master/package.json"
+        }
+      },
+      "/Users/sky/WorkSpace/Program/mine/project/ReactNativePlugins"
+    ]
+  ],
+  "_from": "git+https://github.com/bluefiresky/react-native-scanner.git",
+  "_id": "react-native-scanner@1.0.0",
+  "_inCache": true,
+  "_location": "/react-native-scanner",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "git+https://github.com/bluefiresky/react-native-scanner.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "git+https://github.com/bluefiresky/react-native-scanner.git",
+    "spec": "git+https://github.com/bluefiresky/react-native-scanner.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:bluefiresky/react-native-scanner.git",
+      "sshUrl": "git+ssh://git@github.com/bluefiresky/react-native-scanner.git",
+      "httpsUrl": "git+https://github.com/bluefiresky/react-native-scanner.git",
+      "gitUrl": "git://github.com/bluefiresky/react-native-scanner.git",
+      "shortcut": "github:bluefiresky/react-native-scanner",
+      "directUrl": "https://raw.githubusercontent.com/bluefiresky/react-native-scanner/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/bluefiresky/react-native-scanner.git#d517b169264e5c46665ec8e1f9c9ce2f068f6692",
+  "_shasum": "1f0fe49b96a5a245fa2800589b134ae845f56aa9",
+  "_shrinkwrap": null,
+  "_spec": "git+https://github.com/bluefiresky/react-native-scanner.git",
+  "_where": "/Users/sky/WorkSpace/Program/mine/project/ReactNativePlugins",
+  "author": {
+    "name": "wuran"
+  },
+  "dependencies": {},
   "description": "scanner module for react-native which support Android and Ios",
+  "devDependencies": {},
+  "gitHead": "d517b169264e5c46665ec8e1f9c9ce2f068f6692",
+  "license": "ISC",
   "main": "index.js",
+  "name": "react-native-scanner",
+  "optionalDependencies": {},
+  "readme": "# react-native-scanner\nAn Test Module To Complete The Function Of Scanner\n",
+  "readmeFilename": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "wuran",
-  "license": "ISC"
+  "version": "1.0.0"
 }
