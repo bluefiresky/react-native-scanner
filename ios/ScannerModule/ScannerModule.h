@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <React/RCTBridgeModule.h>
 
-@interface ScannerModule : NSObject
+@interface ScannerModule : NSObject <RCTBridgeModule>
 
 @end
