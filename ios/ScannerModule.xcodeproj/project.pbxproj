@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3354E0B81FBB09B200927408 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3354E0B71FBB09B200927408 /* ScanViewController.m */; };
 		33D3410C1FB9BF5B000A5AC7 /* ScannerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D3410B1FB9BF5B000A5AC7 /* ScannerModule.m */; };
 		33D3410D1FB9BF5B000A5AC7 /* ScannerModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33D3410A1FB9BF5B000A5AC7 /* ScannerModule.h */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3354E0B61FBB09B200927408 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		3354E0B71FBB09B200927408 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		33D341071FB9BF5B000A5AC7 /* libScannerModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libScannerModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D3410A1FB9BF5B000A5AC7 /* ScannerModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScannerModule.h; sourceTree = "<group>"; };
 		33D3410B1FB9BF5B000A5AC7 /* ScannerModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScannerModule.m; sourceTree = "<group>"; };
@@ -60,6 +63,8 @@
 		33D341091FB9BF5B000A5AC7 /* ScannerModule */ = {
 			isa = PBXGroup;
 			children = (
+				3354E0B61FBB09B200927408 /* ScanViewController.h */,
+				3354E0B71FBB09B200927408 /* ScanViewController.m */,
 				33D3410A1FB9BF5B000A5AC7 /* ScannerModule.h */,
 				33D3410B1FB9BF5B000A5AC7 /* ScannerModule.m */,
 			);
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33D3410C1FB9BF5B000A5AC7 /* ScannerModule.m in Sources */,
+				3354E0B81FBB09B200927408 /* ScanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
