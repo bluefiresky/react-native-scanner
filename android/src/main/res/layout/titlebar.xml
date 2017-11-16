@@ -10,6 +10,7 @@
     android:layout_width="60dp"
     android:layout_height="50dp"
     android:text="关闭"
+    android:textSize="16sp"
     android:textColor="#ffffff"
     android:background="#383a45"
     android:id="@+id/close"/>
