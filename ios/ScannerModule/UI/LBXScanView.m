@@ -59,7 +59,44 @@
  */
 - (void)startDeviceReadyingWithText:(NSString*)text
 {
+    int XRetangleLeft = _viewStyle.xScanRetangleOffset;
     
+    CGSize sizeRetangle = CGSizeMake(self.frame.size.width - XRetangleLeft*2, self.frame.size.width - XRetangleLeft*2);
+    
+    if (!_viewStyle.isNeedShowRetangle) {
+        
+        CGFloat w = sizeRetangle.width;
+        CGFloat h = w / _viewStyle.whRatio;
+        
+        NSInteger hInt = (NSInteger)h;
+        h  = hInt;
+        
+        sizeRetangle = CGSizeMake(w, h);
+    }
+    
+    //扫码区域Y轴最小坐标
+    CGFloat YMinRetangle = self.frame.size.height / 2.0 - sizeRetangle.height/2.0 - _viewStyle.centerUpOffset;
+    
+    //设备启动状态提示
+    if (!_activityView)
+    {
+        self.activityView = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+        [_activityView setCenter:CGPointMake(XRetangleLeft +  sizeRetangle.width/2, YMinRetangle + sizeRetangle.height/2)];
+        
+        [_activityView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        [self addSubview:_activityView];
+        
+//        CGRect labelReadyRect = CGRectMake(_activityView.frame.origin.x + _activityView.frame.size.width + 10, _activityView.frame.origin.y, 100, 30);
+//        self.labelReadying = [[UILabel alloc]initWithFrame:labelReadyRect];
+//        _labelReadying.backgroundColor = [UIColor clearColor];
+//        _labelReadying.textColor  = [UIColor whiteColor];
+//        _labelReadying.font = [UIFont systemFontOfSize:18.];
+//        _labelReadying.text = text;
+//
+//        [self addSubview:_labelReadying];
+        
+        [_activityView startAnimating];
+    }
 }
 
 /**
