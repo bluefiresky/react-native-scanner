@@ -54,12 +54,16 @@ public class ScannerModule extends ReactContextBaseJavaModule implements Activit
   @Override
   public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
     this.reactContext.removeActivityEventListener(this);
-    if(requestCode == ScannerModule.requestCode && resultCode == Activity.RESULT_OK){
-      String res = data.getStringExtra(resultLabel);
-      if(res != null){
-        responseHelper(0, res);
+    if(requestCode == ScannerModule.requestCode){
+      if(resultCode == Activity.RESULT_OK){
+        String res = data.getStringExtra(resultLabel);
+        if(res != null){
+          responseHelper(0, res);
+        }else{
+          responseHelper(1, null);
+        }
       }else{
-        responseHelper(1, null);
+        responseHelper(2, null);
       }
     }
   }
@@ -79,6 +83,9 @@ public class ScannerModule extends ReactContextBaseJavaModule implements Activit
       case 1:
         map.putString("error", "扫码失败");
         break;
+      case 2:
+        this.promise.resolve(null);
+        return;
       default:
         map.putString("error", "扫码失败");
         break;

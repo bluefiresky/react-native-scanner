@@ -33,18 +33,23 @@ public class ScannerActivity extends AppCompatActivity implements QRCodeView.Del
 
   @Override
   public void onScanQRCodeSuccess(String result) {
-    Log.i(TAG, "result:" + result);
+    scanResult(result);
+  }
+
+  @Override
+  public void onScanQRCodeOpenCameraError() {
+    scanResult(null);
+  }
+
+  private void scanResult(String result){
+    Log.i(TAG, "ScannerActivity scan result -->> " + result);
+
     Intent intent = new Intent();
     intent.putExtra(ScannerModule.resultLabel, result);
     setResult(RESULT_OK, intent);
 //  vibrate();
     mQRCodeView.startSpot();
     finish();
-  }
-
-  @Override
-  public void onScanQRCodeOpenCameraError() {
-    Log.e(TAG, "打开相机出错");
   }
 
   /** Base **/
