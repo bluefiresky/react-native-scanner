@@ -24,13 +24,23 @@ RCT_REMAP_METHOD(show,
         ScanViewController *svc = [[ScanViewController alloc] init];
         svc.style = [self qqStyle];
         svc.completionBlock = ^(NSString *resultAsString) {
-            NSMutableDictionary *map = [[NSMutableDictionary alloc] initWithCapacity:1];
-            [map setValue:resultAsString forKey:@"result"];
-            resolve(map);
+            resolve([self parseResult:resultAsString]);
         };
         UIApplication *app = [UIApplication sharedApplication];
         [app.delegate.window.rootViewController presentViewController:svc animated:YES completion:nil];
     });
+}
+
+-(NSMutableDictionary*)parseResult:(NSString*)result
+{
+    NSMutableDictionary *map = [[NSMutableDictionary alloc] initWithCapacity:1];
+    if([result isEqualToString:@"error0"]) return NULL;
+    else if([result isEqualToString:@"error1"]) {
+        [map setObject:@"扫码失败" forKey:@"error"];
+    }else{
+        [map setObject:result forKey:@"result"];
+    }
+    return map;
 }
 
 #pragma mark -模仿qq界面

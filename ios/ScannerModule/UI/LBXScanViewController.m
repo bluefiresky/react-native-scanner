@@ -31,8 +31,8 @@
             //不延时，可能会导致界面黑屏并卡住一会
             [self performSelector:@selector(startScan) withObject:nil afterDelay:0.3];
         }else{
-            [_qRScanView stopDeviceReadying];
-//            [self scanResultWithArray:[LBXScanResult initWithScanString]]
+            [self stopScan];
+            [self scanResultWithArray:@[]];
         }
     }];
     
@@ -42,12 +42,8 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
-    
     [self stopScan];
-    
-    [_qRScanView stopScanAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -107,6 +103,8 @@
 - (void)stopScan
 {
     [_zxingObj stop];
+    [_qRScanView stopScanAnimation];
+    [_qRScanView stopDeviceReadying];
 }
 
 //开关闪光灯

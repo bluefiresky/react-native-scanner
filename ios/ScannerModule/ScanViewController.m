@@ -45,15 +45,11 @@
 
 -(UIButton*) setBackButton
 {
-    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 20, 60, 44)];
-    backButton.imageEdgeInsets = UIEdgeInsetsMake(-6, -10, -6, -10);
-    backButton.titleEdgeInsets = UIEdgeInsetsMake(-10, -24, -10, -10);
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 60, 44)];
     backButton.backgroundColor = [UIColor clearColor];
     [backButton setTitle:@"关闭" forState:UIControlStateNormal];
     [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    backButton.titleLabel.font = [UIFont systemFontOfSize:16];
-    [backButton setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_titlebar_back_nor"] forState:UIControlStateNormal];
-    [backButton setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_titlebar_back_nor"] forState:UIControlStateHighlighted];
+    backButton.titleLabel.font = [UIFont systemFontOfSize:18];
     [backButton addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     return backButton;
 }
@@ -64,42 +60,33 @@
 {
     if (array.count < 1)
     {
-        self.completionBlock(@"null");
+        self.completionBlock(@"error0");
         return;
     }
     
     //经测试，可以同时识别2个二维码，不能同时识别二维码和条形码
     for (LBXScanResult *result in array) {
-        
         NSLog(@"scanResult:%@",result.strScanned);
     }
     
     LBXScanResult *scanResult = array[0];
-    
     NSString*strResult = scanResult.strScanned;
-    
     self.scanImage = scanResult.imgScanned;
-    
     if (!strResult) {
-        
-        self.completionBlock(@"no result");
-        
+        self.completionBlock(@"error1");
         return;
     }
-    
-    //震动提醒
-    // [LBXScanWrapper systemVibrate];
-    //声音提醒
-    //[LBXScanWrapper systemSound];
     self.completionBlock(scanResult.strScanned);
-    //[self showNextVCWithScanResult:scanResult];
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    //震动提醒 [LBXScanWrapper systemVibrate];
+    //声音提醒 [LBXScanWrapper systemSound];
 }
 
 
 -(void) onBack
 {
-    self.completionBlock(@"aaaaaaaaaaaaaaaaaaaaa");
+    self.completionBlock(@"error0");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

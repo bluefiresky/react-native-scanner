@@ -730,6 +730,7 @@
 		3363B5041FBC2C00009E0B90 /* ZXingWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXingWrapper.m; sourceTree = "<group>"; };
 		3363B7BE1FBC39B2009E0B90 /* LBXScanVideoZoomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBXScanVideoZoomView.h; sourceTree = "<group>"; };
 		3363B7BF1FBC39B2009E0B90 /* LBXScanVideoZoomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBXScanVideoZoomView.m; sourceTree = "<group>"; };
+		339450531FBD354400F011AF /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		33D341071FB9BF5B000A5AC7 /* libScannerModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libScannerModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D3410A1FB9BF5B000A5AC7 /* ScannerModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScannerModule.h; sourceTree = "<group>"; };
 		33D3410B1FB9BF5B000A5AC7 /* ScannerModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScannerModule.m; sourceTree = "<group>"; };
@@ -749,6 +750,7 @@
 		3354E0EE1FBB0C6300927408 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				339450531FBD354400F011AF /* CodeScan.bundle */,
 				3354E0F51FBB12AB00927408 /* LBXScanView.h */,
 				3354E0F61FBB12AB00927408 /* LBXScanView.m */,
 				3352B65B1FBBE5E1008CEFD0 /* LBXScanViewStyle.h */,
