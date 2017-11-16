@@ -86,7 +86,7 @@
 
 -(void) onBack
 {
-    self.completionBlock(@"error0");
+//    self.completionBlock(@"close");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
