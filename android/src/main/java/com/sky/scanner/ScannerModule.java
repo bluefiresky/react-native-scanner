@@ -84,7 +84,7 @@ public class ScannerModule extends ReactContextBaseJavaModule implements Activit
         map.putString("error", "扫码失败");
         break;
       case 2:
-        this.promise.resolve(null);
+//        this.promise.resolve(null);
         return;
       default:
         map.putString("error", "扫码失败");
